@@ -1,0 +1,128 @@
+/* 
+	这个是b2233的设计 
+*/
+
+.b2233_wrp {
+    position: absolute;
+    top: 175px;
+    width: 50%;
+    height: 775px;
+    overflow: hidden;
+    z-index: 50;
+}
+.b2233_wrp.b22{
+    right:50%;
+}
+.b2233_wrp.b33 {
+    left:50%;
+}
+
+/* 
+	这个是22/33的设计 
+*/
+
+.left_22, .right_33 {
+    position: absolute;
+    z-index: 50;
+    cursor: pointer;
+    background: url(../img/2233.png);
+    height: 639px;
+    width: 301px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.left_22.anim, .right_33.anim {
+    animation:scale2233 0.2s 1;
+    -webkit-animation:scale2233 0.2s 1;
+}
+@keyframes scale2233 {
+    0% { transform:scale(1); }
+    50% { transform:scale(1.02);}
+    100% { transform:scale(1);}
+}
+@-webkit-keyframes scale2233 {
+    0% { -webkit-transform:scale(1);}
+    50% { -webkit-transform:scale(1.02);}
+    100% { -webkit-transform:scale(1);}
+}
+.left_22 {
+    background-position: -890px -12px;
+    top: 0px;
+    right: 0;
+    margin-right: 410px;
+}
+.right_33 {
+    background-position: -277px -699px;
+    top: 0;
+    left: 0;
+    margin-left: 410px;
+}
+@media screen and (max-width: 1024px) {
+    .left_22{
+        margin-right: 310px;
+    }
+    .right_33{
+        margin-left: 310px;
+    }
+}
+
+/* 
+	这个是消息框的设计 
+*/
+
+.communication.b22 .arrow {
+    position: absolute;
+    overflow: hidden;
+    display: block;
+    background: url(http://i2.hdslb.com/u_user/2014bnj/img/arrows.png) no-repeat;
+}
+.communication.b22 .arrow {
+    background-position: 0 -57px;
+    left: -7px;
+}
+.communication.b33 .arrow {
+    background-position: 0 -27px;
+    right: -7px;
+}
+.communication .arrow {
+    position: absolute;
+    top: 20px;
+    width: 8px;
+    height: 12px;
+    background: url(http://i2.hdslb.com/u_user/2014bnj/img/arrows.png) no-repeat;
+}
+.communication {
+    width: 180px;
+    height: 60px;
+    background: #fff8ad;
+    display: none;
+    border-radius: 24px;
+    padding: 20px;
+    color: #bb6d17;
+    font-size: 14px;
+    position: absolute;
+    top: 50px;
+    opacity: 0;
+    z-index: 1000000;
+}
+.communication.b22 {
+    left: 260px;
+    margin-left: 0;
+}
+.communication.b33 {
+    right: 260px;
+    margin-right: 0;
+}
+
+
+/* 
+	背景图片
+*/
+
+body{ 
+	background: url("../img/ba_img.jpg");
+}
